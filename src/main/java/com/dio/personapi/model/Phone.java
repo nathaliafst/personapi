@@ -5,12 +5,10 @@ import lombok.*;
 
 import javax.persistence.*;
 
-@Getter
-@Setter
+@Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@EqualsAndHashCode
-@Builder
 @Entity
 public class Phone {
     @Id

@@ -7,12 +7,10 @@ import lombok.*;
 
 import javax.persistence.*;
 
-@Getter
-@Setter
+@Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@EqualsAndHashCode
-@Builder
 @Entity
 public class Person {
 
@@ -29,7 +27,7 @@ public class Person {
     @Column(nullable = false, unique = true)
     private String cpf;
 
-    private Date bithDate;
+    private Date birthDate;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     private List<Phone> phoneNumbers;
