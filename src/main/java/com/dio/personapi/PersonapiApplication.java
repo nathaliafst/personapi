@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan({"com.delivery.request"})
+//@ComponentScan({"com.dio.controller"})
 public class PersonapiApplication {
 
 	public static void main(String[] args) {

@@ -1,5 +1,7 @@
 package com.dio.personapi.model;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -27,8 +29,8 @@ public class Person {
     @Column(nullable = false, unique = true)
     private String cpf;
 
-    private Date birthDate;
+    private LocalDate birthDate;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    private List<Phone> phoneNumbers;
+    private List<Phone> phoneNumbers = new ArrayList<>();
 }

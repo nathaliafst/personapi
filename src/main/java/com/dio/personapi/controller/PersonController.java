@@ -9,7 +9,6 @@ import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -45,8 +44,8 @@ public class PersonController {
     }
 
     @PutMapping("/{id}")
-    public MessageResponseDTO updateById(@PathVariable Long id, @RequestBody @Valid PersonDTO personDTO) throws PersonNotFoundException {
-        return personService.updateById(id, personDTO);
+    public MessageResponseDTO update(@PathVariable Long id, @RequestBody @Valid PersonDTO personDTO) throws PersonNotFoundException {
+        return personService.update(id, personDTO);
     }
 
 }
